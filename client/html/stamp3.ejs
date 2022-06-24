@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>GPS 카카오 연동</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/client/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/client/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="/client/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/client/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/client/css/stamp.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/client/js/library/jsQR.js"></script>
+    <script src="/client/js/stamp3.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="flex-c-c-c component-title-nav" >
+        <div class="nav-bg" id="nav_main_bg_w03">
+          <p class="flex-c-c nav-title theme-font">흰여울 문화 마을</p>
+          <ul class="flex-c-c nav-sub-title flex-n-c">
+            <li id="li_w_st_01"><a href="/greet3">소개</a></li>
+            <li id="li_w_st_02"><a href="/course3">코스</a></li>
+            <li id="li_w_st_03"><a href="/stamp3">스탬프</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="content-container">
+        <div class="gird6_container">
+            <p class="stamp_status_p" id="stamp_status_p_w">흰여울 문화 마을 스탬프 현황</p>
+            <ul class="stamp_box grid6 mb-20">
+                <li id="movie" class="stamp stamp_w00">
+                    <div class="movie-mark hidden">
+                        <img class="w100-h100" src="/client/file/stamp.png" />
+                    </div>
+                    <p class="stamp_text_g">영화기록관</p>
+    
+                </li>
+                <li id="durebak" class="stamp stamp_w00">
+                    <div class="durebak-mark hidden">
+                        <img class="w100-h100" src="/client/file/stamp.png" />
+                    </div>
+                    <p class="stamp_text_g">두레박쉼터</p>
+                </li>
+                <li id="ggomak" class="stamp stamp_w00">
+                    <div class="ggomak-mark hidden">
+                        <img class="w100-h100" src="/client/file/stamp.png" />
+                    </div>
+                    <p class="stamp_text_g">꼬막계단</p>
+                </li>
+                <li id="observatory" class="stamp stamp_w00">
+                    <div class="observatory-mark hidden">
+                        <img class="w100-h100" src="/client/file/stamp.png" />
+                    </div>
+                    <p class="stamp_text_g">흰여울 전망대</p>
+                </li>
+                <li id="road" class="stamp stamp_w00">
+                    <div class="road-mark hidden">
+                        <img class="w100-h100" src="/client/file/stamp.png" />
+                    </div>
+                    <p class="stamp_text_g">흰여울길</p>
+                </li>
+                <li id="tunnel" class="stamp stamp_w00">
+                    <div class="tunnel-mark hidden">
+                        <img class="w100-h100" src="/client/file/stamp.png" />
+                    </div>
+                    <p class="stamp_text_g">흰여울터널</p>
+                </li>
+                
+            </ul>
+    
+        </div>
+
+        <button><a href="/qr">큐알인증해보삼</a></button>
+    </div>
+
+    <footer class="theme-font footer-container">
+        <ul class="flex-n-c h-100">
+          <li class="footer-li click-on">
+            <a href="/home" class="flex-even-c-c h-100">
+  <!--             <i class="fas fa-home"></i> -->
+              <p>홈</p>
+            </a>
+          </li>
+  
+          <li class="footer-li">
+            <a href="/qr" class="flex-even-c-c h-100" id="qr_box_a_wrap">
+  <!--             <i class="fas fa-road"></i> -->
+              <div class="qr_box">
+                <img src="/client/file/qr_img.png">
+              <p>QR</p>
+            </div>
+            </a>
+          </li>
+          <li class="footer-li">
+            <a href="/all_stamp" class="flex-even-c-c h-100">
+  <!--             <i class="fas fa-qrcode"></i> -->
+              <p>스탬프</p>
+            </a>
+          </li>
+        </ul>
+  
+      </footer>
+    <input type="hidden" id="db-value" value="<%=db%>" />
+</body>
+
+</html>

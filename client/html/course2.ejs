@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>GPS 카카오 연동</title>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="/client/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/client/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="/client/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="/client/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4035c7ad71f6e47af7c2f9acd466b4f"></script>
+  <script src="/client/js/course2.js" defer></script>
+</head>
+
+<body>
+  <!-- 로딩 부분 -->
+  <div class="loading-wrap hidden">
+    <div class="dim"></div>
+    <div class="circle"></div>
+  </div>
+
+  <nav class="flex-c-c-c component-title-nav">
+    <p class="flex-c-c nav-title theme-font">호천문화마을</p>
+    <ul class="flex-c-c nav-sub-title flex-n-c">
+      <li><a href="/greet2">소개</a></li>
+      <li><a href="/course2">코스</a></li>
+      <li><a href="/stamp2">스탬프</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div class="content-container">
+    <ul class="course_detail_btn mb-20">
+      <li id="eoseulleong" class="course">
+        <p>어슬렁미술관</p>
+      </li>
+      <li id="stair180" class="course">
+        <p>180 계단</p>
+      </li>
+      <li id="platform" class="course">
+        <p>문화플랫폼 & 남일바</p>
+      </li>
+      <li id="drama" class="course">
+        <p>쌈마이웨이 촬영지</p>
+      </li>
+      <li id="munwha" class="course">
+        <p>호천생활문화센터</p>
+      </li>
+      <li id="cloudstair" class="course">
+        <p>구름다리</p>
+      </li>
+      <li id="stair100" class="course">
+        <p>희망 100계단</p>
+      </li>
+      <li id="leejungseob" class="course">
+        <p>이중섭 거리미술관</p>
+      </li>
+      <li id="my-position" class="course">나의 위치</li>
+
+    </ul>
+    <div id="location-map"></div>
+    <p>설명1</p>
+  </div>
+
+
+  <footer class="theme-font footer-container">
+    <ul class="flex-n-c h-100" id="footer_ul_h">
+      <li class="footer-li click-on">
+        <a href="/home" class="flex-even-c-c h-100">
+<!--             <i class="fas fa-home"></i> -->
+          <p>홈</p>
+        </a>
+      </li>
+
+      <li class="footer-li">
+        <a href="/qr" class="flex-even-c-c h-100" id="qr_box_a_wrap">
+<!--             <i class="fas fa-road"></i> -->
+        <div class="qr_box qr_box_h">
+            <img src="/client/file/qr_img.png">
+          <p>QR</p>
+        </div>
+        </a>
+      </li>
+      <li class="footer-li">
+        <a href="/all_stamp" class="flex-even-c-c h-100">
+<!--             <i class="fas fa-qrcode"></i> -->
+          <p>스탬프</p>
+        </a>
+      </li>
+    </ul>
+
+  </footer>
+  <!-- server.js에서 db 값을 불러옴 -->
+  <!-- 실무에서는 이렇게 저장X, 개인정보 드러남, 백엔드 처리 -->
+  <input type="hidden" id="db-value" value="<%=db%>" />
+</body>
+
+</html>

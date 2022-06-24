@@ -1,0 +1,12 @@
+post
+https://test-gps.flash21.com/ajax/query?api_key=node
+
+post -> json 방식
+
+https://test-gps.flash21.com/ajax/body
+
+data -> key
+
+{
+    "data": "hey"
+}

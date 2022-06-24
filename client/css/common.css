@@ -1,0 +1,190 @@
+.theme-background-pink {
+  background-color: #ff7a75;
+}
+.theme-background-blue {
+  background-color: #758cff;
+}
+/*0621 은영 수정*/
+/* .theme-font {
+  font-family: 'yg-jalnan', 'sans-serif';
+} */
+.theme-font {
+  font-family: 'ONE-Mobile-POP';
+}
+/* .normal-font {
+  font-family: 'Noto Sans KR', 'sans-serif';
+} */
+.normal-font {
+  font-family: 'ONE-Mobile-POP';
+}
+.text-center {
+  text-align: center;
+}
+.flex-sb-c {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+.flex-sa-c {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+.flex-c-c {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.flex-c-c-c {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+.flex-w-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-c {
+  display: flex;
+  justify-content: center;
+}
+.flex-n-c {
+  display: flex;
+  align-items: center;
+  /* 수정 */
+  justify-content: space-around;
+}
+.flex-n-c-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-even-c-c {
+  display: flex; 
+  justify-content: space-evenly;
+  align-items: center;     
+  flex-direction: column;
+}
+.w100-h100 {
+  width: 100%;
+  height: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.red-on {
+  color: #ef3e61 !important;
+}
+.text-center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.touch-none {
+  touch-action: none;
+}
+.p-40-0 {
+  padding:40px 0;
+}
+.loading-wrap .dim {
+  position: fixed; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0,0,0,.4); 
+  z-index: 50;
+}
+.loading-wrap .circle {
+  position: fixed; 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 70px; 
+  height: 70px; 
+  border: solid 10px #fff; 
+  z-index: 60; 
+  border-top: solid 10px red; 
+  border-radius: 50em; 
+  transition: all .2s;
+  animation-name:spinCircle;
+  animation-duration:0.9s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+@keyframes spinCircle {
+  from {
+      transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.f-w500 {
+  font-weight: 500;
+}
+.f-b {
+  font-weight: bold;
+}
+.f-18 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+.mh-500 {
+  max-height: 500px;
+}
+.over-hidden {
+  overflow: hidden;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.pd-5 {
+  padding: 5px;
+}
+.pd-10 {
+  padding: 10px;
+}
+.pb-50 {
+  padding-bottom: 50px;
+}
+.text-white {
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

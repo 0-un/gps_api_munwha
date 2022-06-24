@@ -1,0 +1,119 @@
+
+/****************** stamp 공통********************/ 
+/*영언 수정 */
+
+.stamp_container{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .gird6_container{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+  }
+  .stamp_box{
+    display: grid;
+    max-width: 600px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    position: absolute;
+/*     top:50px; */
+  }
+  
+  .grid6{
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .stamp_box p{
+    position: absolute;
+    top: 0px;
+  }
+  .stamp {
+    width: 145px;
+    height: 145px;
+/*     background-color: #D6D9F3; */
+    position: relative;
+    border-radius: 50%;
+  }
+/*0621은영수정*/
+.stamp_status_p{
+    font-size: 1.7em;
+    font-weight: 500;
+    font-family: 'ONE-Mobile-POP';
+    position: absolute;
+    top:-45px;
+    left:10px;
+}
+/*0623은영수정*/
+.stamp img{
+  position: relative;
+  z-index: 10;
+}
+.stamp_text_g{
+  color:rgba(0,0,0,0.5);
+  font-family: 'ONE-Mobile-POP';
+  height:130px;
+  line-height: 140px;
+  width: 145px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+
+/*0621은영수정*/
+/*감천 스탬프*/
+
+#nav_main_bg_g03{
+    background-image: url("/client/file/gamcheon_stamp_img.png");
+}
+.stamp_g00{
+    background-color: #CCEAEE;     
+}
+#stamp_status_p_g{
+    color: #0C6B75;
+}
+#li_g_st_01{
+  color:#266888;
+}
+#li_g_st_02{
+  color:#266888;
+}
+/*호천 스탬프*/
+#nav_main_bg_h03{
+    background-image: url("/client/file/hocheon_stamp_img.png");
+}
+.stamp_h00{
+    background-color: #E2CBCF;
+}
+#stamp_status_p_h{
+    color: #462641;
+}
+#li_h_st_01{
+  color:#775E73;
+}
+#li_h_st_02{
+  color:#775E73;
+}
+
+
+/*흰여울 스탬프*/
+#nav_main_bg_w03{
+    background-image: url("/client/file/white_stamp_img.png");
+}
+.stamp_w00{
+    background-color: #D6D9F3;
+}
+#stamp_status_p_w{
+    color: #506197;
+}
+#li_w_st_01{
+  color: #000640;
+}
+#li_w_st_02{
+  color: #000640;
+}

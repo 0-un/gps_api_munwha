@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>GPS 카카오 연동</title>
+		<meta charset="utf-8" />  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/client/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/client/css/font.css"/>
+    <link rel="stylesheet" type="text/css" href="/client/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/client/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/client/js/library/jsQR.js"></script>
+    <script src="/client/js/qr.js" defer></script>
+  </head>
+  <body>
+
+    <!-- <nav class="flex-c-c-c component-title-nav">
+      <p class="flex-c-c nav-title theme-font">GPS 카카오 연동</p>
+      <div class="flex-c-c nav-sub-title">QR인증</div>
+    </nav> -->
+<!-- 
+    <div class="content-container">
+      <div class="qr-container">
+        <p class="wait-text">화면을 인식중입니다.</p>
+      </div>  
+      
+    </div>
+     -->
+     <div class="flex-c-c canvas-wrap">
+      <canvas id="canvas" width="300" height="300"></canvas>
+    </div>
+   
+    <footer class="theme-font footer-container">
+      <ul class="flex-n-c h-100">
+        <li class="footer-li click-on">
+          <a href="/home" class="flex-even-c-c h-100">
+            <i class="fas fa-home"></i>
+            <p>홈</p>
+          </a>
+        </li>
+
+        <li class="footer-li">
+          <a href="/qr" class="flex-even-c-c h-100">
+            <i class="fas fa-road"></i>
+            <p>QR</p>
+          </a>
+        </li>
+        <li class="footer-li">
+          <a href="/all_stamp" class="flex-even-c-c h-100">
+            <i class="fas fa-qrcode"></i>
+            <p>스탬프</p>
+          </a>
+        </li>
+      </ul>
+
+    </footer>
+    <input type="hidden" id="db-value" value="<%=db%>" />
+  </body>
+</html>
