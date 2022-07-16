@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="/client/css/font.css"/>
     <link rel="stylesheet" type="text/css" href="/client/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/client/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/client/css/course.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4035c7ad71f6e47af7c2f9acd466b4f"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6f42962bada6f9a28e76b984a7918e78"></script>
     <script src="/client/js/course1.js" defer></script>
 
   </head>	
@@ -21,17 +22,17 @@
       <div class="circle"></div>
     </div>
 
-    <nav class="flex-c-c-c component-title-nav">
-      <p class="flex-c-c nav-title theme-font">감천문화마을</p>
-      <ul class="flex-c-c nav-sub-title flex-n-c">
-        <li><a href="/greet1">소개</a></li>
-        <li><a href="/course1">코스</a></li>
-        <li><a href="/stamp1">스탬프</a></li>
-      </ul>
+    <nav class="flex-c-c-c component-title-nav" >
+      <div class="nav-bg" id="nav_main_bg_g02">
+        <p class="flex-c-c nav-title theme-font">감천 문화 마을</p>
+        <ul class="flex-c-c nav-sub-title flex-n-c" id="nav_ul_g00">
+          <li><a href="/greet1">소개</a></li>
+          <li><a href="/course1">코스</a></li>
+          <li><a href="/stamp1">스탬프</a></li>
+        </ul>
+      </div>
     </nav>
 
-
-    
     <div class="content-container">
       <ul class="course_detail_btn mb-20">
         <li id="museum" class="course 1">
@@ -60,19 +61,51 @@
       </li>
         <li id="my-position" class="course 9" >나의 위치</li>
       </li>
-         <li id="course-text" class="course" >첫번째 코스</li>
+         <!-- <li id="course-text" class="course" >첫번째 코스</li> -->
       </ul>
       <div id="location-map"></div> 
 
-      <div class="click-box">
-        <img src="/client/file/Click_box.png" class="click-box2">
-        <p id="text"></p>
-      </div>
-       
       
-        
+      <!--클릭이벤트 텍스트-->
+      <div class="clickEvent">
+        <div class="click-box hidden"> 
+          <p id="text">작은박물관은 주민들이 모은 감천의 옛 사진, 생활용품들이 테마 별로 전시되어 있어 옛 생활의 추억과 근대 문화를 쉽게 접할 수 있는 공간입니다. 또한, 지금의 감천문화마을을 있게 한 2009년 문화체육관광부의 『마을미술프로젝트』를 시작으로 오늘까지의 감천문화마을 조성 과정을 살펴볼 수 있습니다.</p>
+          <img src="/client/file/smallmuseum.png"width="100%">
+        </div>
+        <div class="click-box2 hidden"> 
+          <p id="text">하늘마루는 용두산을 포함한 부산항과 감천항을 함께 바라볼 수 있는 확 트인 전망을 가지고 있으며, 감천문화마을과 관련된 자료들을 전시하는 전시 안내관이자 전망대로써, 마을 주민이 거주하던 집의 원형을 그대로 보존하면서 재생하는 방식으로 설계되었습니다.</p>
+          <img src="/client/file/greenhouse.jpg"width="100%">
+        </div>
+        <div class="click-box3 hidden"> 
+          <p id="text">감천문화마을빵집이 관광객 입맛에 맞춘 제품을 개발하고 내부 리모델링을 통해 새롭게 달라졌다. 지난 해 말 개장했던 이곳은 신제품 개발과 관광객 쉼터 조성을 위해 잠시 문을 닫았다가 이번에 새로운 모습으로 단장하였다.</p>
+          <img src="/client/file/bread.jpg"width="100%">
+       </div>
+        <div class="click-box4 hidden"> 
+          <p id="text">감천문화마을 최고의 포토존이며
+            별을 떠나 지구로 온 어린왕자는 사막여우를 만나 긴 여행을 하다가 공간을 뛰어 넘어 감천문화마을로 왔는데요.
+            여행 중 잠시 난간에 걸터앉아 마을을 내려다 보고 있고 감천문화마을의 전경을 어린왕자와 함께 즐겨보세요.
+          </p>
+          <img src="/client/file/b612.jpg"width="100%">
+        </div>
+        <div class="click-box5 hidden"> 
+          <p id="text">감내어울터는 옛 목욕탕 건물을 리모델링하여 만든 커뮤니티 센터입니다. 마을주민들과 방문객을 위한 카페와 작은 갤러리 공간이 있으며(2층), 방문객을 위한 게스트하우스(4층)가 있어 편안하게 숙박하실 수 있습니다. </p>
+          <img src="/client/file/감내어울터.png"width="100%">
+        </div>
+        <div class="click-box6 hidden"> 
+          <p id="text">집 자체가 작품인 ‘그린하우스’는 갤러리 겸 카페다. 인증사진 명소이자 예술가와 여행객의 휴식 공간이기도 하다.</p>
+          <img src="/client/file/greenhouse.jpg"width="100%">
+        </div>
+        <div class="click-box7 hidden"> 
+          <p id="text">멍멍이가 있는 집은 강아지들을 통하여 감천동의 어떤 가족을 우화적으로 표현하고 있다. 감천문화마을 사람들이 간직해온 우애와 공동체적 연대감을 작품에 은유적으로 담아내었습니다.</p>
+          <img src="/client/file/doghouse.PNG"width="100%">
+        </div>
+        <div class="click-box8 hidden"> 
+          <p id="text">과거 소금 가게였던 재래시장 내 빈 가게를 황토소금 상회로 연출 하였다. 감천 향토소금을 홍보하는 기능과 함께 마을주민과 관람객들에게 흥미로운 볼거리를 제공하고있습니다.</p>
+          <img src="/client/file/소금상회.jpg" width="100%">
+        </div>
+      </div>
+
     </div>
-    
    
     <footer class="theme-font footer-container">
       <ul class="flex-n-c h-100" id="footer_ul_g">

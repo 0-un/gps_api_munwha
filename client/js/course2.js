@@ -21,6 +21,7 @@ const cloudstair = document.getElementById("cloudstair");
 const stair100 = document.getElementById("stair100");
 const leejungseob = document.getElementById("leejungseob");
 const myPosition = document.getElementById("my-position");
+const course_detail =document.querySelector(".course_detail_btn") //  장소 버튼 클릭시 장소설명 이벤트 핸들러
 // 인풋창의 값을 db 값으로 불러옴
 const dbValue = document.getElementById("db-value").value;
 const dbArray = dbValue.split(",");
@@ -259,50 +260,213 @@ function changeBtnCss(target) {
   }
 }
 
+//준익 버튼 이벤트 재할당 지역변수//
+let btnnumber;
+let empty ;
+
 eoseulleong.addEventListener("click", function () {
+  btnnumber = eoseulleong.classList[1]
   changeBtnCss(0);
   clickPosition = "other";
   // 위치 중앙으로 이동
   panTo(EOSEULLEONG[0], EOSEULLEONG[1]);
 });
 stair180.addEventListener("click", function () {
+  btnnumber = stair180.classList[1]
   changeBtnCss(1);
   clickPosition = "other";
   panTo(STAIR180[0], STAIR180[1]);
 });
 platform.addEventListener("click", function () {
+  btnnumber = platform.classList[1]
   changeBtnCss(2);
   clickPosition = "other";
   panTo(PLATFORM[0], PLATFORM[1]);
 });
 drama.addEventListener("click", function () {
+  btnnumber = drama.classList[1]
   changeBtnCss(3);
   clickPosition = "other";
   panTo(DRAMA[0], DRAMA[1]);
 });
 munwha.addEventListener("click", function () {
+  btnnumber = munwha.classList[1]
   changeBtnCss(4);
   clickPosition = "other";
   panTo(MUNWHA[0], MUNWHA[1]);
 });
 cloudstair.addEventListener("click", function () {
+  btnnumber =cloudstair.classList[1]
   changeBtnCss(5);
   clickPosition = "other";
   panTo(CLOUDSTAIR[0], CLOUDSTAIR[1]);
 });
 stair100.addEventListener("click", function () {
+  btnnumber = stair100.classList[1]
   changeBtnCss(6);
   clickPosition = "other";
   panTo(STAR100[0], STAR100[1]);
 });
 leejungseob.addEventListener("click", function () {
+  btnnumber = leejungseob.classList[1]
   changeBtnCss(7);
   clickPosition = "other";
   panTo(LEEJUNGSEOB[0], LEEJUNGSEOB[1]);
 });
 
 myPosition.addEventListener("click", function () {
+  btnnumber = myPosition.classList[1]
   changeBtnCss(8);
   clickPosition = "user";
   panTo(userLatitude, userLongitude);
 });
+
+// 클릭이벤트 (준익 06-22) 
+course_detail.addEventListener("click", showText);
+function  showText() {
+  empty = btnnumber
+  console.log(empty);
+
+  for (let i = 0; i < empty; i++) {
+    if (empty[i] == "1") { // 작은박물관
+    const salt = document.querySelector(".click-box8");
+    const doghouse = document.querySelector(".click-box7");
+    const green = document.querySelector(".click-box6");
+    const gamnae = document.querySelector(".click-box5");
+    const b612 = document.querySelector(".click-box4");
+    const bread = document.querySelector(".click-box3");
+    const skyText = document.querySelector(".click-box2");
+    const museumText = document.querySelector(".click-box");
+      museumText.classList.remove("hidden");
+      skyText.classList.add("hidden");
+      bread.classList.add("hidden");
+      b612.classList.add("hidden");
+      green.classList.add("hidden");
+      gamnae.classList.add("hidden");
+      doghouse.classList.add("hidden");
+      salt.classList.add("hidden");
+    }else if(empty[i] == "2"){ //하늘마루
+      const salt = document.querySelector(".click-box8");
+      const doghouse = document.querySelector(".click-box7");
+      const green = document.querySelector(".click-box6");
+      const gamnae = document.querySelector(".click-box5");
+      const b612 = document.querySelector(".click-box4");
+      const bread = document.querySelector(".click-box3");
+      const skyText = document.querySelector(".click-box2");
+      const museumText = document.querySelector(".click-box");
+
+      skyText.classList.remove("hidden");
+      museumText.classList.add("hidden");
+      bread.classList.add("hidden");
+      b612.classList.add("hidden");
+      green.classList.add("hidden");
+      gamnae.classList.add("hidden");
+      doghouse.classList.add("hidden");
+      salt.classList.add("hidden");
+    }else if(empty[i] == "3"){ // 감천제빵소
+      const salt = document.querySelector(".click-box8");
+      const doghouse = document.querySelector(".click-box7");
+      const green = document.querySelector(".click-box6");
+      const gamnae = document.querySelector(".click-box5");
+      const b612 = document.querySelector(".click-box4");
+      const bread = document.querySelector(".click-box3");
+      const skyText = document.querySelector(".click-box2");
+      const museumText = document.querySelector(".click-box");
+
+      bread.classList.remove("hidden");
+      museumText.classList.add("hidden");
+      skyText.classList.add("hidden");
+      b612.classList.add("hidden");
+      green.classList.add("hidden");
+      gamnae.classList.add("hidden");
+      doghouse.classList.add("hidden");
+      salt.classList.add("hidden");
+    }else if(empty[i] == "4"){ // 소행성
+      const salt = document.querySelector(".click-box8");
+      const doghouse = document.querySelector(".click-box7");
+      const green = document.querySelector(".click-box6");
+      const gamnae = document.querySelector(".click-box5");
+      const b612 = document.querySelector(".click-box4");
+      const bread = document.querySelector(".click-box3");
+      const skyText = document.querySelector(".click-box2");
+      const museumText = document.querySelector(".click-box");
+
+      b612.classList.remove("hidden");
+      bread.classList.add("hidden");
+      museumText.classList.add("hidden");
+      skyText.classList.add("hidden");
+      green.classList.add("hidden");
+      gamnae.classList.add("hidden");
+      doghouse.classList.add("hidden");
+      salt.classList.add("hidden");
+    }else if(empty[i] == "5"){ // 감내어울터
+      const salt = document.querySelector(".click-box8");
+      const doghouse = document.querySelector(".click-box7");
+      const green = document.querySelector(".click-box6");
+      const gamnae = document.querySelector(".click-box5");
+      const b612 = document.querySelector(".click-box4");
+      const bread = document.querySelector(".click-box3");
+      const skyText = document.querySelector(".click-box2");
+      const museumText = document.querySelector(".click-box");
+      gamnae.classList.remove("hidden");
+      museumText.classList.add("hidden");
+      skyText.classList.add("hidden");
+      bread.classList.add("hidden");
+      b612.classList.add("hidden");
+      green.classList.add("hidden");
+      doghouse.classList.add("hidden");
+      salt.classList.add("hidden");
+    }else if(empty[i] == "6"){ // 그린하우스
+      const salt = document.querySelector(".click-box8");
+      const doghouse = document.querySelector(".click-box7");
+      const green = document.querySelector(".click-box6");
+      const gamnae = document.querySelector(".click-box5");
+      const b612 = document.querySelector(".click-box4");
+      const bread = document.querySelector(".click-box3");
+      const skyText = document.querySelector(".click-box2");
+      const museumText = document.querySelector(".click-box");
+      museumText.classList.add("hidden");
+      skyText.classList.add("hidden");
+      bread.classList.add("hidden");
+      b612.classList.add("hidden");
+      gamnae.classList.add("hidden");
+      green.classList.remove("hidden");
+      doghouse.classList.add("hidden");
+      salt.classList.add("hidden");
+    }else if(empty[i] == "7"){ // 멍멍이가있는집
+      const salt = document.querySelector(".click-box8");
+      const doghouse = document.querySelector(".click-box7");
+      const green = document.querySelector(".click-box6");
+      const gamnae = document.querySelector(".click-box5");
+      const b612 = document.querySelector(".click-box4");
+      const bread = document.querySelector(".click-box3");
+      const skyText = document.querySelector(".click-box2");
+      const museumText = document.querySelector(".click-box");
+      museumText.classList.add("hidden");
+      skyText.classList.add("hidden");
+      bread.classList.add("hidden");
+      b612.classList.add("hidden");
+      gamnae.classList.add("hidden");
+      green.classList.add("hidden");
+      doghouse.classList.remove("hidden");
+      salt.classList.add("hidden");
+}else if(empty[i] == "8"){ // 감천황토소금상회
+  const salt = document.querySelector(".click-box8");
+  const doghouse = document.querySelector(".click-box7");
+  const green = document.querySelector(".click-box6");
+  const gamnae = document.querySelector(".click-box5");
+  const b612 = document.querySelector(".click-box4");
+  const bread = document.querySelector(".click-box3");
+  const skyText = document.querySelector(".click-box2");
+  const museumText = document.querySelector(".click-box");
+  museumText.classList.add("hidden");
+  skyText.classList.add("hidden");
+  bread.classList.add("hidden");
+  b612.classList.add("hidden");
+  gamnae.classList.add("hidden");
+  green.classList.add("hidden");
+  doghouse.classList.add("hidden");
+  salt.classList.remove("hidden");
+}
+}
+}

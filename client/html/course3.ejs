@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="/client/css/font.css"/>
     <link rel="stylesheet" type="text/css" href="/client/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/client/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/client/css/course.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4035c7ad71f6e47af7c2f9acd466b4f"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6f42962bada6f9a28e76b984a7918e78"></script>
     <script src="/client/js/course3.js" defer></script>
   </head>	
   
@@ -20,43 +21,73 @@
       <div class="circle"></div>
     </div>
 
-    <nav class="flex-c-c-c component-title-nav">
-      <p class="flex-c-c nav-title theme-font">흰여울문화마을</p>
-      <ul class="flex-c-c nav-sub-title flex-n-c">
-        <li><a href="/greet3">소개</a></li>
-        <li><a href="/course3">코스</a></li>
-        <li><a href="/stamp3">스탬프</a></li>
-      </ul>
+    <nav class="flex-c-c-c component-title-nav" >
+      <div class="nav-bg" id="nav_main_bg_w02">
+        <p class="flex-c-c nav-title theme-font">흰여울 문화 마을</p>
+        <ul class="flex-c-c nav-sub-title flex-n-c" id="nav_ul_w00">
+          <li><a href="/greet3">소개</a></li>
+          <li><a href="/course3">코스</a></li>
+          <li><a href="/stamp3">스탬프</a></li>
+        </ul>
+      </div>
     </nav>
 
 
     
+    
     <div class="content-container">
       <ul class="course_detail_btn mb-20">
-        <li id="movie" class="course">
+        <li id="movie" class="course 1">
           <p>영화기록관</p>
         </li>
-        <li id="durebak" class="course">
+        <li id="durebak" class="course 2">
           <p>두레박쉼터</p>
         </li>
-        <li id="ggomak" class="course">
+        <li id="ggomak" class="course 3">
         <p>꼬막계단</p>
       </li>
-        <li id="observatory" class="course" >
+        <li id="observatory" class="course 4" >
         <p>흰여울 전망대</p>
       </li>
-        <li id="road" class="course" >
+        <li id="road" class="course 5" >
         <p>흰여울길</p>
       </li>
-        <li id="tunnel" class="course" >
+        <li id="tunnel" class="course 6" >
         <p>흰여울터널</p>
       </li>
-        <li id="my-position" class="course" >나의 위치</li>
+        <li id="my-position" class="course 7" >나의 위치</li>
 
       </ul>
       <div id="location-map"></div>
-      <p>설명1</p>
-    </div>
+
+<!--클릭이벤트 텍스트-->
+<div class="clickEvent">
+  <div class="click-box hidden"> 
+    <p id="text">영화기록관은 흰여울문화마을 안내센터 1층에 위치해 있으며, 흰여울문화마을에서 촬영했던 다양한 영화들을 소개하고 있습니다. 또, 영화 속 의상들을 입어보며 포토존에서 추억을 남길 수 있습니다.</p>
+    <img src="/client/file/film.jpg"width="100%">
+  </div>
+  <div class="click-box2 hidden"> 
+    <p id="text">마을 주민들의 ‘만남의 장소’였다. 공터 한쪽에는 오래전부터 쓰던 우물이 있다. 주민들은 우물이 있는 공터라는 뜻을 담아 ‘두레박 샘터’라 불렀다. </p>
+    <img src="/client/file/kipple.jpg"width="100%">
+  </div>
+  <div class="click-box3 hidden"> 
+    <p id="text">마을의 중간쯤에 위치한 폭이 좁은 계단입니다. 이 계단을 오르면 생전에 금술이 좋았던 키 작은 할매 할배의 꼬막집을 만납니다.
+      <img src="/client/file/cockle.jpg"width="100%">
+    </p>
+  </div>
+  <div class="click-box4 hidden"> 
+    <p id="text">에메랄드빛 바다가 한눈에 보이는 힐링 전망대</p>
+    <img src="/client/file/observatory.jpg" width="100%">
+  </div>
+  <div class="click-box5 hidden"> 
+    <p id="text">흰여울길은 예전에 봉래산 기슭에서 여러 갈래의 물줄기가 바다로 굽이쳐 내림으로써 마치 흰눈이 내리는 듯 빠른 물살의 모습과 같다하여 흰여울길이라 합니다. </p>
+    <img src="/client/file/whiteroad.jpg" width="100%">
+  </div>
+  <div class="click-box6 hidden"> 
+    <p id="text">절영해안산책로 근처 피아노계단과 파도광장 사이 급경사 계단구간을 이용하기 어려운 노약자들의 보행 편의 제공을 위해 해안암벽에 약 70m 터널을 뚫어 2018년 12월 흰여울해안터널을 개통하게 되었다. 터널 내부에 인조암 시공, 광섬유판석조명, 포토존 등을 설치하여 구민들 뿐만 아니라 관광객들에게도 방문하기 좋은 관광명소로 자리매김하고 있다.</p>
+    <img src="/client/file/whitetunnel.jpg" width="100%">
+  </div>
+</div>
     
    
     <footer class="theme-font footer-container">

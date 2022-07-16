@@ -3,15 +3,18 @@
 /*영언 수정 */
 
 .stamp_container{
-    height: 500px;
+    padding-top: 70px;
+    height: 550px;
     display: flex;
     justify-content: center;
     position: relative;
   }
   .gird6_container{
+    padding-top: 70px;
     height: 400px;
     display: flex;
     justify-content: center;
+    position: relative;
   }
   .stamp_box{
     display: grid;
@@ -45,8 +48,8 @@
     font-weight: 500;
     font-family: 'ONE-Mobile-POP';
     position: absolute;
-    top:-45px;
-    left:10px;
+    top:15px;
+    left:8%;
 }
 /*0623은영수정*/
 .stamp img{

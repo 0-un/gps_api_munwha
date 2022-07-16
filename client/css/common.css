@@ -32,7 +32,7 @@
 }
 .flex-c-c {
   display: flex;
-  justify-content: center; 
+/*   justify-content: center;  */
   align-items: center;
 }
 .flex-c-c-c {

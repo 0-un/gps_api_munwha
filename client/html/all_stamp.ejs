@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/client/css/font.css"/>
     <link rel="stylesheet" type="text/css" href="/client/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/client/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/client/css/all_stamp.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/client/js/library/jsQR.js"></script>
@@ -15,43 +16,55 @@
   </head>
   <body>
 
-    <nav class="flex-c-c-c component-title-nav">
-      <p class="flex-c-c nav-title theme-font">전체스탬프</p>
+    <nav class="flex-c-c-c component-title-nav" id="stamp_status">
+      <p class="flex-c-c nav-title theme-font">전체 스탬프 현황</p>
 
     </nav>
 
     <div class="content-container all_stamp_container" >
-      <div class ="all_stamp" style="width: 400px; height: 150px; background-color: pink;">
+      <div class ="all_stamp">
         <div class="hidden stamp_wrap gamcheon_stamp">
           <img src="/client/file/all_stamp.png" />
         </div>
         <a href="">
-          <p>감천문화마을</p>
-           <div class="stamp_data1" style="font-size: 30px; font-weight:bold;"></div>
+        <div class="all_stamp_box" id="all_stamp_box01">
+          <h1>감천문화마을</h1>
+           <div class="stamp_data1"></div>
            <p>현재모은스탬프</p>
+        </div>
         </a>
       </div>
-      <div class ="all_stamp" style="width: 400px; height: 150px; background-color: skyblue;">
+      <div class ="all_stamp">
         <div class="hidden stamp_wrap hocheon_stamp">
           <img src="/client/file/all_stamp.png" />
         </div>        
         <a href="">
-          <p>호천문화마을</p>
-           <div class="stamp_data2" style="font-size: 30px; font-weight:bold;"></div>
+          <div class="all_stamp_box" id="all_stamp_box02">
+          <h1>호천문화마을</h1>
+           <div class="stamp_data2"></div>
            <p>현재모은스탬프</p>
+          </div>
         </a>
       </div>
-      <div class ="all_stamp" style="width: 400px; height: 150px; background-color: palegreen;">
+      <div class ="all_stamp">
         <div class="hidden stamp_wrap huinnyeoul_stamp">
           <img src="/client/file/all_stamp.png" />
         </div>
         <a href="">
-          <p>흰여울문화마을</p>
-           <h1 class="stamp_data3" style="font-size: 30px; font-weight:bold;"></h1>
+          <div class="all_stamp_box" id="all_stamp_box03">
+          <h1>흰여울문화마을</h1>
+           <div class="stamp_data3"></div>
            <p>현재모은스탬프</p>
+          </div>
         </a>
       </div>
     </div>
+
+    <div id="stamp_tel">
+        TEL. 000-123-4567
+    </div>
+
+
     <footer class="theme-font footer-container">
       <ul class="flex-n-c h-100">
         <li class="footer-li click-on">

@@ -6,58 +6,75 @@
     box-sizing: border-box;
 }
 .content-container{
-    margin-top: 5%;
-}
-/*문화마을 박스 3개 공통*/
-.all_stamp_box{
-    width:300px;
-    height:180px;
-    border-radius: 20px;
-    margin: 0 auto;
-    margin-bottom: 3%;
-    text-align: center;
-    font-weight: 700;
-}
-.all_stamp_box h1{
-    font-size: 1.7em;
-    padding: 10%;
-    font-family: 'TwoCon';
-}
-.all_stamp_box p{
-    font-size: 1.2em;
-    padding: 10%;
-}
-/*감천 문화 마을*/
-#all_stamp_box01{
-    background-color: #C4D3FF;
-}
-#all_stamp_box01 h1{
-    color:#516CBB;
-}
-/*호천 문화 마을*/
-#all_stamp_box02{
-    background-color: #B5FFFF;
-}
-#all_stamp_box02 h1{
-    color:#25A9B7;
-}
-/*흰여울 문화 마을*/
-#all_stamp_box03{
-    background-color: #FFD2F9;
-}
-#all_stamp_box03 h1{
-    color:#CB63BD;
+/*     margin-top: 5%; */
+    min-height: 0;
 }
 /*전체스탬프현황*/
 #stamp_status{
-    width: 220px; 
+    font-family: 'ONE-Mobile-POP';
+    width: 300px; 
     height: 70px;
     line-height: 70px;
     background-color: #D6D9F3;
     color: #596297;
     margin: 0 auto;
+    margin-top: 8%;
     text-align: center;
-    font-weight: 700;
     border-radius: 40px;
     font-size: 1.5em;
+}
+/*문화마을 박스 3개 공통*/
+.all_stamp_box{
+    font-family: 'ONE-Mobile-POP';
+    width:300px;
+    height:180px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.all_stamp_box h1{
+    font-size: 1.7em;
+    padding: 10%;
+    font-family: 'ONE-Mobile-POP';
+}
+.all_stamp_box p{
+    font-size: 1.2em;
+    padding: 1%;
+}
+
+/*감천 문화 마을*/
+#all_stamp_box01{
+    background-color: #B5FFFF;
+}
+#all_stamp_box01 h1{
+    color:#25A9B7;
+}
+/*호천 문화 마을*/
+#all_stamp_box02{
+    background-color: #FFD2F9;
+}
+#all_stamp_box02 h1{
+    color:#CB63BD;
+}
+/*흰여울 문화 마을*/
+#all_stamp_box03{
+    background-color: #C4D3FF;
+}
+#all_stamp_box03 h1{
+    color:#516CBB;
+}
+
+/*전화번호*/
+#stamp_tel{
+    font-family: 'ONE-Mobile-POP';
+    background-color: #596297;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    border-radius: 15px;
 }

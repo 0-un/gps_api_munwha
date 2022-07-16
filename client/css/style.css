@@ -29,9 +29,10 @@
   color: white;
 }
 .nav-title {
-  font-size: 30px; 
+  font-size: 35px; 
   height: 100%;
   width: 100%;
+  padding-left: 10%;
 /*   text-align: left; */
 }
 .nav-sub-title {
@@ -51,7 +52,7 @@
 .content-container {
   width: 100vw; 
   min-height: calc(100vh - 170px); 
-  margin-top: 110px;
+  margin-top: 50px;
 }
 #content_title{
   color: black;
@@ -67,6 +68,9 @@
   color: white;
   padding: 15px;
   margin: 0 10%;
+}
+.clickEvent{
+  font-family: 'ONE-Mobile-POP';
 }
 
 
@@ -150,11 +154,11 @@ footer p{
   letter-spacing: 2px;
 }
 .introduce {
-  font-family: 'ONE-Mobile-POP';
-  padding: 0 40px;
-  font-size: 18px;
+  font-family: 'Noto Sans KR';
+  padding: 0 40px 150px 40px;
+  font-size: 17px;
   text-align: center;
-  font-weight: bold;
+/*   font-weight: bold; */
 }
 
 /* 코스 소개( 06-22 준익 수정 ) */ 
@@ -236,10 +240,40 @@ font-family:"ONE-Mobile-POP";
 
 
 
+/*************** 로그인 0628 은영**********************/
+.login_link{
+  text-decoration: none;
+  color: black;
+}
+#login_bg{ 
+  background-image: url("/client/file/login_bg.png");
+  background-size: cover;
+  height: 960px;
+  display:flex; 
+  flex-direction:column;
+}
+#login_wrapper{
+  margin-top: auto;
+  align-self: center;
+}
+.login_box{
+  margin: 5px;
+  font-family: 'ONE-Mobile-POP';
+  position: relative;
+}
+.login_text{
+  position:absolute;
+  top:20px;
+  margin-left: 35%;
+}
+#naver_login p {
+  color: white;
+  margin-left: 38%;
+}
 
 
 /* all stamp 영언*/
-.all_stamp_container {
+/* .all_stamp_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,7 +291,7 @@ font-family:"ONE-Mobile-POP";
   position: absolute;
   top: -20px;
   left: -30px;
-}
+} */
 
 
 

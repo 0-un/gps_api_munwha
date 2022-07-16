@@ -1,15 +1,6 @@
 
 /******************nav********************/
 
-/*공통*/
-.nav-bg{
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    font-family: 'ONE-Mobile-POP';
-    color: white;
-}
-
 /*감천*/
 #nav_main_bg_g01{
     background-image: url("/client/file/gamcheon_greet_img.png");
@@ -44,10 +35,11 @@
 }
 /******************content-container***********************/
 /*공통*/
-.content-container p{
+/* .content-container p{
     color: white;
     font-weight: 400;
-}
+} */
+
 /*감천*/
 #content_title_g00{
     color:#0C6B75;

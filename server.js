@@ -11,14 +11,18 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use("/client", express.static("client"));
 
-let db = [ "MUSEUM", "SKYMARU", "BREAD", "B612", "GAMNAE", "GREEN", "DOGHOUSE", "SALT",
-              "EOSEULLEONG", "STAIR180", "PLATFORM", "DRAMA", "MUNWHA", "CLOUDSTAIR", "STAR100", "LEEJUNGSEOB", 
-              "MOVIE", "DUREBAK", "GGOMAK", "OBSERVATORY", "ROAD", "TUNNEL",];
+// let db = [ "MUSEUM", "SKYMARU", "BREAD", "B612", "GAMNAE", "GREEN", "DOGHOUSE", "SALT",
+//               "EOSEULLEONG", "STAIR180", "PLATFORM", "DRAMA", "MUNWHA", "CLOUDSTAIR", "STAR100", "LEEJUNGSEOB", 
+//               "MOVIE", "DUREBAK", "GGOMAK", "OBSERVATORY", "ROAD", "TUNNEL",];
+let db = [];
 // db 체크
 console.log(db);
 
 server.get("/", function (req, res) {
   res.render("splash");
+});
+server.get("/login", function (req, res) {
+  res.render("login");
 });
 server.get("/home", function (req, res) {
   res.render("home");
