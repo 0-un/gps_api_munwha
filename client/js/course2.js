@@ -217,7 +217,7 @@ function addStaticMarker(position) {
   // qr 찍으면 이미지 변경
   if (dbArray.includes(position.title)) {
     markerImageUrl = "/client/file/complete.jpg";
-    markerImageNormalSize = new kakao.maps.Size(50, 35);
+    markerImageNormalSize = new kakao.maps.Size(24, 35);
     markerImageClickSize = new kakao.maps.Size(70, 65);
   }
   const normalImage = createMarkerImage(markerImageUrl, markerImageNormalSize);

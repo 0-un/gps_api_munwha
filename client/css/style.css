@@ -205,8 +205,10 @@ height: 200px;
 width: 100%;
 font-family:"ONE-Mobile-POP";
 }
+
 #text{
-  height: 100px;
+  height: auto;
+  padding: 10px;
   background-color: rgb(239,243,255);
 }
 .pick-on {

@@ -14,7 +14,7 @@ server.use("/client", express.static("client"));
 // let db = [ "MUSEUM", "SKYMARU", "BREAD", "B612", "GAMNAE", "GREEN", "DOGHOUSE", "SALT",
 //               "EOSEULLEONG", "STAIR180", "PLATFORM", "DRAMA", "MUNWHA", "CLOUDSTAIR", "STAR100", "LEEJUNGSEOB", 
 //               "MOVIE", "DUREBAK", "GGOMAK", "OBSERVATORY", "ROAD", "TUNNEL",];
-let db = [];
+let db = ["MUSEUM", "SKYMARU", "BREAD", "B612","EOSEULLEONG", "STAIR180", "PLATFORM"];
 // db 체크
 console.log(db);
 
