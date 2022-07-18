@@ -43,27 +43,37 @@ const position = [
   { name: "TUNNEL", latitude: 35.07584487984777, longitude: 129.04764285326448},
 ]
 // 만족한 값은 배열에서 지워주기 함수 생성
-// const test = () => {
-//   // tail 위치 반경
-//   // 범위 안에서 사용자 위치 빼고 다이아몬드 모양으로 범위 지정, 약 3분 거리
-//   const tail = 0.0021674054525;
-//   // 클릭했을 때 위치 가져ㅏ옴
-//   navigator.geolocation.getCurrentPosition((pos) => {
-//     const userLatitude = pos.coords.latitude;
-//     const userLongitude = pos.coords.longitude;
-//     // 포지션만큼 반복문 돌림
-//     for (let i = 0; i < position.length; i++) {
-//       const pos_lati = position[i].latitude;
-//       const pos_long = position[i].longitude;
-//       //  (내위치 + 경도)와 (내위치 - 경도) => 세로 범위 && (내위치 + 위도)와 (내위치 - 위도) => 가로 범위
-//       if ((pos_lati - tail <= userLatitude && userLatitude <= pos_lati + tail) && (pos_long - tail <= userLongitude && userLongitude <= pos_long + tail)) {
-//         return position[i].name
-//       } 
-//     }
-//     return 
-//   });
+
+//만족한 값은 배열에서 지워주기 함수 생성
+const test = () => {
+  // tail 위치 반경
+  // 범위 안에서 사용자 위치 빼고 다이아몬드 모양으로 범위 지정, 약 3분 거리
+  const tail = 0.0021674054525;
+  // 클릭했을 때 위치 가져ㅏ옴
+  navigator.geolocation.getCurrentPosition((pos) => {
+    const userLatitude = pos.coords.latitude;
+    const userLongitude = pos.coords.longitude;
+    // 포지션만큼 반복문 돌림
+    for (let i = 0; i < position.length; i++) {
+      const pos_lati = position[i].latitude;
+      const pos_long = position[i].longitude;
+      let distanceX = pos_lati - userLatitude;
+      let distanceY = pos_long - userLongitude;
+      let xyDistance = Math.sqrt((distanceX * distanceX) + (distanceY * distanceY));
+
+      if(xyDistance>= tail){
+        return position[i].name
+      }
+      //  (내위치 + 경도)와 (내위치 - 경도) => 세로 범위 && (내위치 + 위도)와 (내위치 - 위도) => 가로 범위
+      // if ((pos_lati - tail <= userLatitude && userLatitude <= pos_lati + tail) && (pos_long - tail <= userLongitude && userLongitude <= pos_long + tail)) {
+      //   return position[i].name
+      // } 
+    }
+    return 
+  });
   
-// }
+}
+
 
 
 function doFetch(type) {
