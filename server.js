@@ -12,7 +12,7 @@ const logoutRouter = require('./routes/logout');
 const passportConfig = require('./passport');
 const passport = require('passport');
 const session = require('express-session');
-
+require('dotenv').config();
 server.set("view engine", "ejs");
 server.set("views", process.cwd() + "/client/html");
 
@@ -25,6 +25,21 @@ server.use(express.static(path.join(__dirname, 'public')));
 server.use(express.static(path.join(__dirname, 'views')));
 server.use(express.static(path.join(__dirname, 'assets')));
 
+// catch 404 and forward to error handler
+server.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+server.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.server.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 
 
 //social auth
