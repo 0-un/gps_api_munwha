@@ -5,11 +5,11 @@ passportConfig();
 // 헤로쿠에서 랜덤으로 부여하기 위해서 사용되는 포트 번호 || 로컬에서 포트 번호
 const PORT = process.env.PORT || 9077;
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const authRoutuer = require('./routes/auth');
-const logoutRouter = require('./routes/logout');
-const passportConfig = require('./passport');
+const indexRouter = require('/routes/index');
+const usersRouter = require('/routes/users');
+const authRoutuer = require('/routes/auth');
+const logoutRouter = require('/routes/logout');
+const passportConfig = require('/passport');
 const passport = require('passport');
 const session = require('express-session');
 require('dotenv').config();
