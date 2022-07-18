@@ -1,64 +1,15 @@
 const express = require("express");
 
 const server = express();
-passportConfig();
 // 헤로쿠에서 랜덤으로 부여하기 위해서 사용되는 포트 번호 || 로컬에서 포트 번호
 const PORT = process.env.PORT || 9077;
 
-const indexRouter = require('/routes/index');
-const usersRouter = require('/routes/users');
-const authRoutuer = require('/routes/auth');
-const logoutRouter = require('/routes/logout');
-const passportConfig = require('/passport');
-const passport = require('passport');
-const session = require('express-session');
-require('dotenv').config();
 server.set("view engine", "ejs");
 server.set("views", process.cwd() + "/client/html");
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use("/client", express.static("client"));
-
-
-server.use(express.static(path.join(__dirname, 'public')));
-server.use(express.static(path.join(__dirname, 'views')));
-server.use(express.static(path.join(__dirname, 'assets')));
-
-// catch 404 and forward to error handler
-server.use(function(req, res, next) {
-  next(createError(404));
-});
-
-// error handler
-server.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.server.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
-
-
-//social auth
-server.use(session({
- 
-  resave:false,
-  saveUninitialized:true,
-  secret:process.env.SECRET
- 
-}));
-server.use(passport.initialize())
-server.use(passport.session());
-
-server.use('/', indexRouter);
-server.use('/users', usersRouter);
-server.use('/auth',authRoutuer);
-server.use('/logout',logoutRouter);
-
-
 
 // let db = [ "MUSEUM", "SKYMARU", "BREAD", "B612", "GAMNAE", "GREEN", "DOGHOUSE", "SALT",
 //               "EOSEULLEONG", "STAIR180", "PLATFORM", "DRAMA", "MUNWHA", "CLOUDSTAIR", "STAR100", "LEEJUNGSEOB", 
