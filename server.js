@@ -5,12 +5,8 @@ const PORT = process.env.PORT || 9077;
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
-// var cookieParser = require("cookie-parser");
-// var logger = require("morgan");
-//const MongoStore = require('connect-mongo')(session);
 const session = require("express-session");
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
 var authRoutuer = require("./routes/auth");
 var logoutRouter = require("./routes/logout");
 var passportConfig = require("./passport");
@@ -36,7 +32,6 @@ server.use(express.urlencoded({ extended: false }));
 // social login
 
 var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
 var logoutRouter = require('./routes/logout');
 var passport =  require('passport');
