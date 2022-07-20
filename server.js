@@ -1,34 +1,21 @@
-// const express = require("express");
-
-// const server = express();
-// // 헤로쿠에서 랜덤으로 부여하기 위해서 사용되는 포트 번호 || 로컬에서 포트 번호
+ // 헤로쿠에서 랜덤으로 부여하기 위해서 사용되는 포트 번호 || 로컬에서 포트 번호
 const PORT = process.env.PORT || 9077;
 
-// const  passportConfig  = require('./passport'); //passport 폴더 안에 index.js
-// passportConfig();
-// server.set("view engine", "ejs");
-// server.set("views", process.cwd() + "/client/html");
 
-// server.use(express.json());
-// server.use(express.urlencoded({ extended: true }));
-// server.use("/client", express.static("client"));
-
-
-var createError = require("http-errors");
-var express = require("express");
+// var createError = require("http-errors");
+const express = require("express");
 var path = require("path");
 // var cookieParser = require("cookie-parser");
 // var logger = require("morgan");
 //const MongoStore = require('connect-mongo')(session);
 const session = require("express-session");
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-var authRoutuer = require("./routes/auth");
-var logoutRouter = require("./routes/logout");
-var passportConfig = require("./passport");
-var passport = require("passport");
+const indexRouter = require("./routes/index");
+const authRoutuer = require("./routes/auth");
+const logoutRouter = require("./routes/logout");
+const passportConfig = require("./passport");
+const passport = require("passport");
 require("dotenv").config();
-var server = express();
+const server = express();
 passportConfig();
 // view engine setup
 // server.set("views", path.join(__dirname, "views"));
@@ -39,7 +26,6 @@ server.use(express.static(path.join(__dirname, "/client")));
 server.use(express.static(path.join(__dirname, "assets")));
 server.set("port", process.env.PORT || 3000);
 
-// server.use(logger("dev"));
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 // server.use(cookieParser());
@@ -47,11 +33,10 @@ server.use(express.urlencoded({ extended: false }));
 
 // social login
 
-var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
-var authRouter = require('./routes/auth');
-var logoutRouter = require('./routes/logout');
-var passport =  require('passport');
+const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
+const logoutRouter = require('./routes/logout');
+const passport =  require('passport');
 //express-session 설정 하단부에 passport session 설정해준다.
 
 
