@@ -3,7 +3,7 @@
 
 /*감천*/
 #nav_main_bg_g02{
-    background-image: url("/client/file/gamcheon_course_img.png");
+    background-image: url("/file/gamcheon_course_img.png");
 }
 #nav_ul_g00 li:nth-of-type(1){
     color: #266888;
@@ -14,7 +14,7 @@
 
 /*호천*/
 #nav_main_bg_h02{
-    background-image: url("/client/file/hocheon_course_img.png");
+    background-image: url("/file/hocheon_course_img.png");
 }
 #nav_ul_h00 li:nth-of-type(1){
     color: #775E73;
@@ -25,7 +25,7 @@
 
 /*흰여울*/
 #nav_main_bg_w02{
-    background-image: url("/client/file/white_course_img.png");
+    background-image: url("/file/white_course_img.png");
 }
 #nav_ul_w00 li:nth-of-type(1){
     color: #000642;

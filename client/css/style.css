@@ -266,7 +266,7 @@ font-family:"ONE-Mobile-POP";
   color: black;
 }
 #login_bg{ 
-  background-image: url("/client/file/login_bg.png");
+  background-image: url("/file/login_bg.png");
   background-size: cover;
   height: 960px;
   display:flex; 

@@ -48,11 +48,11 @@
   }
 /*0621은영수정*/
 .stamp_status_p{
+    width: 100%;
+    padding-left: 20px;
     font-size: 1.7em;
     font-weight: 500;
     font-family: 'ONE-Mobile-POP';
-    top:15px;
-    left:8%;
 }
 /*0623은영수정*/
 .stamp img{
@@ -74,7 +74,7 @@
 /*감천 스탬프*/
 
 #nav_main_bg_g03{
-    background-image: url("/client/file/gamcheon_stamp_img.png");
+    background-image: url("/file/gamcheon_stamp_img.png");
 }
 .stamp_g00{
     background-color: #CCEAEE;     
@@ -90,7 +90,7 @@
 }
 /*호천 스탬프*/
 #nav_main_bg_h03{
-    background-image: url("/client/file/hocheon_stamp_img.png");
+    background-image: url("/file/hocheon_stamp_img.png");
 }
 .stamp_h00{
     background-color: #E2CBCF;
@@ -108,7 +108,7 @@
 
 /*흰여울 스탬프*/
 #nav_main_bg_w03{
-    background-image: url("/client/file/white_stamp_img.png");
+    background-image: url("/file/white_stamp_img.png");
 }
 .stamp_w00{
     background-color: #D6D9F3;
