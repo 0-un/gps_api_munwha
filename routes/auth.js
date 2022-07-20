@@ -4,6 +4,12 @@ const passport = require('passport');
 const {isLoggedIn,isNotLoggedIn} = require('./middlewares')
 const router = express.Router();
 
+// router.use((req,res,next)=>{
+//     res.locals.user = req.user;
+
+// })
+
+
 
 //kakao 로그인
 router.get('/kakao',passport.authenticate('kakao'));
