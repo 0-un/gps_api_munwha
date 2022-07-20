@@ -10,7 +10,7 @@ router.get('/kakao',passport.authenticate('kakao'));
 
 router.get('/kakao/callback',passport.authenticate('kakao',{failureRedirect:'/'}),
 (req,res)=>{
-    res.redirect('/');
+    res.redirect('/home');
 })
 
 //네이버 로그인
@@ -25,15 +25,15 @@ router.get(
 
         failureRedirect: '/auth' }),
     (req, res) => {
-    res.redirect('/');
+    res.redirect('/home');
     },
 );
 
 //login
-router.get('/home',authController.auth);
+router.get('/',authController.auth);
 
 //local login
-router.post('/home',(req,res,next)=>{
+router.post('/',(req,res,next)=>{
     console.log(req.body);
 })
 
