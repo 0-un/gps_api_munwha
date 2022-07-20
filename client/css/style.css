@@ -3,12 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  max-width: 495px;
+  margin: 0 auto; 
+
+}
+
 @font-face {
     font-family: 'ONE-Mobile-POP';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+/* 0720 영언 전체적인 width 수정 */
 
 /*****************nav ***************/
 .component-title-nav {
@@ -19,40 +27,45 @@
   position: relative;
 }
 /*0621 은영수정*/
+/* 0720 영언 전체적인 반응형 수정 */
 .nav-bg{
-  height: 450px;
+  width: 100%;
+  /* height: 450px; */
+  height: 0;
+  padding-top: calc(495/450*100%);
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   font-family: 'ONE-Mobile-POP';
   color: white;
 }
 .nav-title {
   font-size: 35px; 
-  height: 100%;
   width: 100%;
   padding-left: 10%;
-/*   text-align: left; */
+  position: absolute;
+  top: 40%;
+  left: 0;
+  /* text-align: left; */
 }
 .nav-sub-title {
-  width: 100%;
-  height: 55px;
+ width: 100%;
+  /* height: 55px; */
   text-align: center;
-/*   background: #ce3236;  */
   color:#fff; 
   font-size: 18px; 
-/*   font-weight: bold; */
   position: absolute;
-  top: 400px;
-  padding: 0 45px;
+  top: 90%;
+  /* padding-left: 20px; */
+  margin:0  40px;
 }
+
 
 /*************** content-container 공통 0621은영******************/
 .content-container {
-  width: 100vw; 
+  width: 100%; 
   min-height: calc(100vh - 170px); 
-  margin-top: 50px;
+  margin-top: 20%;
 }
 #content_title{
   color: black;
@@ -78,6 +91,8 @@
 /*********************** footer 0609은영 ************************/
 /*footer 공통 및 흰여울 footer*/
 .footer-container {
+  max-width: 495px;
+  margin: 0 auto;
   position: fixed; 
   bottom:0; left:0; right:0; 
   height: 60px; 
@@ -129,7 +144,7 @@ footer p{
 /* home */
 
 .main-background {
-  width: 100vw; 
+  width: 100%; 
   height: calc(100vh - 60px);
 }
 .main-img-wrap {
