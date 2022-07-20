@@ -60,7 +60,7 @@ let markers = [];
 let selectedMarker = null;
 
 // 로딩함수 호출
-loading();
+// loading();
 // 클릭할 때마다 버튼 Css 먹여줌
 // 기본으로 8 : 나의 위치 버튼
 changeBtnCss(8);
@@ -80,7 +80,7 @@ if (navigator.geolocation) {
     // 내위치 그림
     addMarker(new kakao.maps.LatLng(userLatitude, userLongitude));
     // 로딩 푼다
-    loading();
+    // loading();
   });
   // 실시간으로 사용자 위치 바뀌는 부분 -> 내 위도나 경도가 조금이라도 변하면 값을 던져줌
   // 비동기적으로 내위치만 계속해서 변경(필요한 부분만)

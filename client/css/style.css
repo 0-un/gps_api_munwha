@@ -258,6 +258,9 @@ font-family:"ONE-Mobile-POP";
 
 
 /*************** 로그인 0628 은영**********************/
+.wrapper{
+  max-width: 495px;
+}
 .login_link{
   text-decoration: none;
   color: black;
