@@ -15,6 +15,7 @@
 
 .wrapper {
     margin: 0 auto;
+    max-width: 495px;
 }
 .Backgraund {
     background-image: url(../file/main_back.png);
@@ -38,7 +39,7 @@
     width: 70%;
     height: auto;
     float: right;
-    margin-block-start: -114px;```
+    margin-block-start: -114px;
 }
 .star_3 img{
     margin-block-start: -68px;
