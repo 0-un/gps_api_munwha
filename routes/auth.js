@@ -5,13 +5,12 @@ const {isLoggedIn,isNotLoggedIn} = require('./middlewares')
 const router = express.Router();
 
 
-
 //kakao 로그인
 router.get('/kakao',passport.authenticate('kakao'));
 
 router.get('/kakao/callback',passport.authenticate('kakao',{failureRedirect:'/'}),
 (req,res)=>{
-    res.redirect('/home');
+    res.redirect('/');
 })
 
 //네이버 로그인
@@ -26,12 +25,12 @@ router.get(
 
         failureRedirect: '/auth' }),
     (req, res) => {
-    res.redirect('/home');
+    res.redirect('/');
     },
 );
 
 //login
-router.get('/',authController.auth);
+router.get('/home',authController.auth);
 
 //local login
 router.post('/home',(req,res,next)=>{
